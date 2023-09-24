@@ -10,6 +10,3 @@ const tasks = [
   {title: "Pagar a conta de energia", type: "Urgente"},
   {title: "Assistir a um documentário interessante", type: "Normal"},
 ];
-
-const background = document.getElementsByName('body');
-background.style.color = 	#e2e2e2
