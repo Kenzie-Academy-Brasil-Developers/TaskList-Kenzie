@@ -109,8 +109,7 @@ body {
 }
 
 .tasks__container {
-    width: 942px;
-    height: 381px;
+    width: 886px;
     background-color: white;
     margin: 50px;
     border-radius: 10px;
@@ -119,6 +118,7 @@ body {
     align-content: space-around;
     flex-direction: column;
     justify-content: center;
+    padding: 30px;
 }
 .task__item{
     background-color: 	 #f1f3f5;
