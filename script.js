@@ -13,6 +13,7 @@ const tasks = [
 
 function renderElements(tasks){
   const list = document.querySelector('ul')
+  list.innerHTML = ''
   for (let i = 0; i < tasks.length; i++){
     let teste = createTaskItem(tasks[i])
     list.appendChild(teste)
@@ -46,7 +47,14 @@ function createTaskItem(taskList){
   list.append(infoContainer, deleteButton)
   infoContainer.append(taskType, taskTittle)
   
-  return list
+
+  deleteButton.addEventListener("click", function() {
+  const index = tasks.indexOf(taskList);
+  tasks.splice(index, 1);
+  renderElements(tasks);
+})
+
+return list
 
 
 }
@@ -56,10 +64,10 @@ renderElements(tasks)
 const button = document.getElementsByClassName("form__button--add-task");
 const newTask = document.querySelector('#input_title')
 const priority = document.querySelector('select')
-const button2 = document.querySelector('.form__button--add-task');
+const buttonAddTask = document.querySelector('.form__button--add-task');
 const news = [{title: '' , type:''}];
 
-button2.onclick = function(event) {
+buttonAddTask.onclick = function(event) {
   event.preventDefault();
   title1 = newTask.value
   title2 = priority.value
@@ -67,6 +75,7 @@ button2.onclick = function(event) {
   renderElements(tasks)
   
 };
+
 
 
 
