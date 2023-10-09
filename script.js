@@ -51,3 +51,28 @@ function createTaskItem(taskList){
 
 }
 renderElements(tasks)
+
+
+const button = document.getElementsByClassName("form__button--add-task");
+const newTask = document.querySelector('#input_title')
+const priority = document.querySelector('select')
+const button2 = document.querySelector('.form__button--add-task');
+const news = [{title: '' , type:''}];
+
+button2.onclick = function(event) {
+  event.preventDefault();
+  title1 = newTask.value
+  title2 = priority.value
+  tasks.push({ title: title1, type: title2 });
+  renderElements(tasks)
+  
+};
+
+
+
+
+
+
+
+
+
